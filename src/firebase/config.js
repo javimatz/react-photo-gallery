@@ -16,7 +16,11 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+// Firebase Storage Service
 const projectStorage = firebase.storage();
+// Firebase Database
 const projectFirestore = firebase.firestore();
 
-export { projectStorage, projectFirestore};
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+
+export { projectStorage, projectFirestore, timestamp };
